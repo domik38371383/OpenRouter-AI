@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenRouter AI by helivee</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="chat-container">
+    <div id="chat-window"></div>
+    <form id="input-form">
+      <input
+        type="text"
+        id="input-message"
+        autocomplete="off"
+        placeholder="Write Something..."
+        required
+      />
+      <button type="submit" id="send-button">Send</button>
+	  <button onclick="gotoapi()" id="apibutton">Get Free API Key</button>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+  function gotoapi() {
+  alert("Click OK To Continue...")
+  window.location.href = "https://openrouter.ai/settings/keys";
+  }
+  </script>
+  <script>
+  const apibutton = document.getElementById('apibutton');
+ apibutton.style.position = 'fixed'; 
+apibutton.style.left = '5px';
+apibutton.style.top = '5px';
+ </script>
+
+</body>
+</html>

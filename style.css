@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: #eee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#chat-container {
+    background: #1e1e1e;
+    height: 80vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    padding: 10px;
+    width: 400px;
+    max-width: 95vw;
+    box-sizing: border-box;
+    transition: width 0.4s ease-in-out;
+}
+
+#chat-window {
+    flex: 1;
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-y: auto;
+    overflow-x: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: #00bcd4 #222;
+    box-sizing: border-box;
+}
+
+
+.message {
+    display: inline-block;
+    max-width: 999px;          
+    min-width: 80px;           
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.4;
+    color: #eee;
+    box-sizing: border-box;
+    white-space: pre-wrap;       
+    overflow-x: visible;         
+    transition: width 0.3s ease, max-width 0.3s ease;
+    width: fit-content;
+}
+
+
+/* Scrollbar wewnątrz dymka */
+.message::-webkit-scrollbar {
+    height: 6px;
+}
+
+.message::-webkit-scrollbar-thumb {
+    background: #00bcd4;
+    border-radius: 3px;
+}
+
+.message::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.user-message {
+    background: #00bcd4;
+    color: #121212;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.bot-message {
+    background: #333;
+    color: #eee;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+#input-form {
+    display: flex;
+    padding: 10px;
+    background: #222;
+    border-radius: 0 0 10px 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+#input-message {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    background: #121212;
+    color: #eee;
+    box-sizing: border-box;
+}
+
+#send-button {
+    background: #00bcd4;
+    border: none;
+    color: #121212;
+    padding: 0 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#send-button:hover {
+    background: #0097a7;
+}
